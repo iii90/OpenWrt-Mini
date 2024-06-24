@@ -14,9 +14,9 @@
 
 | 管理地址  | 默认账号 | 默认密码 |
 | ---- | ---- | ---- |
-| 192.168.2.100 | root | 无密码 |
+| 192.168.0.111 | root | 无密码 |
 
-## 固件下载:   [Releases](https://github.com/WukongMaster/OpenWrt-Mini/releases) 
+## 固件下载:   [Releases](https://github.com/iii80/OpenWrt-Mini/releases) 
 
 ## 固件截图
 
