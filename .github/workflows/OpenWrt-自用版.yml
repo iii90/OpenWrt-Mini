@@ -2,8 +2,8 @@ name:  OpenWrt-自用版
 
 on: 
   workflow_dispatch:
-  schedule:
-    - cron: 1 0 * * *
+##  schedule:
+##    - cron: 1 0 * * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -12,6 +12,7 @@ env:
   CONFIG_FILE: OK.config
   DIY_P1_SH: DIY-1.sh
   DIY_P2_SH: DIY-2.sh
+  SSH_ACTIONS: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
