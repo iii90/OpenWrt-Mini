@@ -1,4 +1,4 @@
-name:  OpenWrt-R23.7.7-自用6.1内核版
+name:  OpenWrt-R23.7.7-自用版
 
 on: 
   workflow_dispatch:
@@ -79,7 +79,7 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-        sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.1/g' ./target/linux/x86/Makefile
+##        sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.1/g' ./target/linux/x86/Makefile
 
     - name: 更新外部插件
       run: cd openwrt && ./scripts/feeds update -a
@@ -161,7 +161,7 @@ jobs:
       run: |
         echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "OpenWrt-Mini_ X86_64-R23.7.7-自用6.1内核版）" >> release.txt
+        echo "OpenWrt-Mini_ X86_64-R23.7.7-自用版）" >> release.txt
         echo "默认地址：192.168.0.111" >> release.txt
         echo "默认密码：无密码" >> release.txt
         echo "插件清单：ShadowSocksR Plus+，PassWall，OpenClash" >> release.txt
@@ -173,7 +173,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} -R23.7.7-自用6.1内核版
+        name: ${{ env.FILE_TIME }} -R23.7.7-自用版
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/* 
