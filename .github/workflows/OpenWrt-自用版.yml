@@ -12,7 +12,7 @@ env:
   CONFIG_FILE: OK.config
   DIY_P1_SH: DIY-1.sh
   DIY_P2_SH: DIY-2.sh
-  SSH_ACTIONS: true
+#  SSH_ACTIONS: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
@@ -103,9 +103,9 @@ jobs:
 
 
         
-    - name: SSH connection to Actions
-      uses: P3TERX/ssh2actions@main
-      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
+#    - name: SSH connection to Actions
+#      uses: P3TERX/ssh2actions@main
+#      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
     
     
     
